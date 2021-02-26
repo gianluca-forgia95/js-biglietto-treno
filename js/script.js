@@ -5,14 +5,14 @@ var eta = prompt('Quanti anni hai?');
 //Prezzo di base
 var prezzo = ( km * 0.21 + " $" );
 //Condizione sconto over 65
+
 if ( eta >= 65 ) {
- var prezzo = (( km * 0.21 ) -  ( 40 / 100 ) + " $");
+ var prezzo = ( km * 0.21 - (( km * 0.21 ) / 100 * 40 ) + " $");
 }
 //Condizione sconto under 18
 if ( eta < 18 ) {
-var prezzo = (( km * 0.21 ) - ( 20 / 100 )  + " $");
+var prezzo = ( km * 0.21 - (( km * 0.21 ) / 100 * 20 ) + " $");
 }
-
 //Stampa Prezzo
 console.log( prezzo );
 document.getElementById('prezzobiglietto').innerHTML = prezzo ;
